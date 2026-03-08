@@ -40,7 +40,7 @@ const ICONS = {
    NAV CONFIG
 =============================== */
 const NAV = [
-  { name: 'About', href: '/about' },
+  { name: 'About', href: '/About-p' },
   {
     name: 'Solutions',
     image: '/image/image1.jpg',
