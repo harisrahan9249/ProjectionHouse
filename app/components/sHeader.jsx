@@ -108,25 +108,24 @@ const NAV = [
 
 
 
-  {
-    name: 'Delivery Model',
-    image: '/image/image3.jpg',
-    pillars: [
-      {
-        title: 'Turnkey – End-to-End Delivery & Asset Lifecycle',
-        icon: 'delivery',
-        singleColumn: true,
-        items: [
-          { label: 'Consultancy & Assessment', href: '/delivery/consultancy' },
-          { label: 'Concept Design & Engineering', href: '/delivery/design-engineering' },
-          { label: 'Supply, Installation & Integration', href: '/delivery/installation' },
-          { label: 'Compliance, Testing, Commissioning & Handover', href: '/delivery/commissioning' },
-          { label: 'Training, AMC & Managed Services', href: '/delivery/managed-services' },
-        ],
-      },
-    ],
-  },
-
+ {
+  name: 'Delivery Model',
+  image: '/image/image3.jpg',
+  pillars: [
+    {
+      // title: 'End-to-End Delivery',
+      icon: 'delivery',
+      singleColumn: true,
+      items: [
+        { label: 'Consultancy & Assessment', href: '/delivery/consultancy' },
+        { label: 'Concept Design & Engineering', href: '/delivery/design-engineering' },
+        { label: 'Supply, Installation & Integration', href: '/delivery/installation' },
+        { label: 'Compliance, Testing, Commissioning & Handover', href: '/delivery/commissioning' },
+        { label: 'Training, AMC & Managed Services', href: '/delivery/managed-services' },
+      ],
+    },
+  ],
+},
   { name: 'Sustainability', href: '/sustainability' },
   { name: 'Contact', href: '/contact' },
 ];

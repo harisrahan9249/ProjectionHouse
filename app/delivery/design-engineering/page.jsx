@@ -1,7 +1,7 @@
 'use client';
 
 import { useEffect } from 'react';
-import Header from '../../components/Header';
+import Header from '../../components/sHeader';
 import Footer from '../../components/Footer';
 
 export default function ConceptDesignEngineering() {

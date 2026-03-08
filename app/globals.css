@@ -6,7 +6,84 @@ html {
 @import "tw-animate-css";
 
 @custom-variant dark (&:is(.dark *));
+@keyframes floatLeaf {
 
+0%{
+transform:translateY(-50px) rotate(0deg);
+opacity:0;
+}
+
+20%{
+opacity:1;
+}
+
+100%{
+transform:translateY(110vh) rotate(360deg);
+opacity:0;
+}
+
+}
+
+.leaf{
+animation: floatLeaf linear infinite;
+}
+@keyframes floatLeaf {
+
+0%{
+transform:translateY(-80px) rotate(0deg);
+opacity:0;
+}
+
+20%{
+opacity:1;
+}
+
+100%{
+transform:translateY(110vh) rotate(360deg);
+opacity:0;
+}
+
+}
+
+.leaf{
+animation: floatLeaf linear infinite;
+}
+@keyframes floatLeaf{
+0%{transform:translateY(-80px) rotate(0deg);opacity:0;}
+20%{opacity:1;}
+100%{transform:translateY(110vh) rotate(360deg);opacity:0;}
+}
+
+.leaf{
+animation: floatLeaf linear infinite;
+}
+
+@keyframes mistMove{
+0%{transform:translateX(-10%)}
+50%{transform:translateX(10%)}
+100%{transform:translateX(-10%)}
+}
+
+.mist{
+animation: mistMove 30s ease-in-out infinite;
+}
+
+@keyframes sunPulse{
+0%{opacity:.4}
+50%{opacity:.7}
+100%{opacity:.4}
+}
+
+.sunGlow{
+animation: sunPulse 10s ease-in-out infinite;
+}
+@keyframes fogMove{
+
+0%{transform:translateX(-5%)}
+50%{transform:translateX(5%)}
+100%{transform:translateX(-5%)}
+
+}
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);

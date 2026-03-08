@@ -16,7 +16,7 @@ import {
   ShieldCheckIcon,
 } from '@heroicons/react/24/outline';
 
-import Header from '../../components/Header';
+import Header from '../../components/sHeader';
 import Footer from '../../components/Footer';
 
 export default function SmartTicketingPage() {

@@ -1,6 +1,6 @@
 'use client';
 
-import Header from "./components/Header";
+import Header from "./components/header/Header";
 import Banner from "./components/Banner";
 import Legacy from './components/Legacy';
 import Sectors from './components/Sectors';
