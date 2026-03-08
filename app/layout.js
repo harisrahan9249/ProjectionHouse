@@ -6,7 +6,7 @@ const jost = Jost({ subsets: ['latin'] })
 
 export const metadata = {
   title: 'projection house | ',
-  description: 'Glansa AV',
+  description: 'projection house',
     icons: {
     // icon: "/glansa/GLANSA LOGO pr.png", // Or use 'favicon.ico' if you have one
   },
