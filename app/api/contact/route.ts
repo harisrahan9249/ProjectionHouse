@@ -1,45 +1,32 @@
-export const dynamic = "force-dynamic";
-
-import { prisma } from "../../../lib/prisma";
-import { headers } from "next/headers";
+import { db } from "../../../lib/mysql";
+import { NextResponse } from "next/server";
 
 export async function POST(req: Request) {
   try {
     const body = await req.json();
+
     const { name, email, phone, company, message } = body;
 
     if (!name || !email || !message) {
-      return new Response(
-        JSON.stringify({ success: false, error: "Missing fields" }),
+      return NextResponse.json(
+        { error: "Missing required fields" },
         { status: 400 }
       );
     }
 
-    const h = headers();
+    await db.query(
+      `INSERT INTO contactLead (name, email, phone, company, message)
+       VALUES (?, ?, ?, ?, ?)`,
+      [name, email, phone, company, message]
+    );
 
-    await prisma.contactLead.create({
-      data: {
-        name,
-        email,
-        phone: phone || null,
-        company: company || null,
-        message,
-        ip: h.get("x-forwarded-for") ?? undefined,
-      },
-    });
+    return NextResponse.json({ success: true });
 
-    await prisma.event.create({
-      data: {
-        name: "contact_submit",
-      },
-    });
-
-    return Response.json({ success: true });
   } catch (error) {
     console.error("CONTACT API ERROR:", error);
 
-    return new Response(
-      JSON.stringify({ success: false }),
+    return NextResponse.json(
+      { error: "Server error" },
       { status: 500 }
     );
   }
