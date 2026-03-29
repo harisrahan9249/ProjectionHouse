@@ -9,7 +9,7 @@ export default function Banner() {
       {/* BACKGROUND VIDEO / IMAGE */}
       <video
         className="absolute inset-0 w-full h-full object-cover brightness-100 saturate-100"
-        src="/video/video.mp4"
+        src="/video/video12.mp4"
         autoPlay
         muted
         loop

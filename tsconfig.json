@@ -28,7 +28,7 @@
     ".next/types/**/*.ts",
     "**/*.ts",
     "**/*.tsx"
-  ],
+, "app/components/Banner.jsx"  ],
   "exclude": [
     "node_modules"
   ]
